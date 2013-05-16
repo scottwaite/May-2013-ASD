@@ -19,27 +19,27 @@ $(document).ready(function () {
             tbApplicants = [];
 
         function Add() {
-            var Employee = JSON.stringify({
-                ID: $("#empID").val(),
-                Name: $("#empName").val(),
-                Phone: $("#empPhone").val(),
-                Email: $("#empEmail").val()
+            var Applicant = JSON.stringify({
+                ID: $("#appID").val(),
+                Name: $("#appName").val(),
+                Phone: $("#appPhone").val(),
+                Email: $("#appEmail").val()
             });
-            tbApplicants.push(Employee);
+            tbApplicants.push(Applicant);
 
-            alert("The employee record was saved.");
+            alert("The Applicant record was saved.");
             return true;
         }
 
         function Edit() {
             tbApplicants[selected_index] = JSON.stringify({
-                ID: $("#empID").val(),
-                Name: $("#empName").val(),
-                Phone: $("#empPhone").val(),
-                Email: $("#empEmail").val()
+                ID: $("#appID").val(),
+                Name: $("#appName").val(),
+                Phone: $("#appPhone").val(),
+                Email: $("#appEmail").val()
             }); //Alter the selected item on the table
             localStorage.setItem("tbApplicants", JSON.stringify(tbApplicants));
-            alert("The employee record was edited.");
+            alert("The Applicant record was edited.");
             operation = "A"; //Return to default value
             return true;
         }
@@ -47,7 +47,7 @@ $(document).ready(function () {
         function Delete() {
             tbApplicants.splice(selected_index, 1);
             localStorage.setItem("tbApplicants", JSON.stringify(tbApplicants));
-            alert("Employee Deleted.");
+            alert("Applicant Deleted.");
         }
 
         function List() {
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 "<thead>" +
                 "   <tr>" +
                 "   <th></th>" +
-                "   <th>Employee ID</th>" +
+                "   <th>Applicant ID</th>" +
                 "   <th>Name</th>" +
                 "   <th>Phone</th>" +
                 "   <th>Email</th>" +
@@ -65,13 +65,13 @@ $(document).ready(function () {
                 "<tbody>" +
                 "</tbody>");
             for (var i in tbApplicants) {
-                var emp = JSON.parse(tbApplicants[i]);
+                var app = JSON.parse(tbApplicants[i]);
                 $("#tblList tbody").append("<tr>" +
                     "   <td><img src='edit.png' alt='Edit" + i + "' class='btnEdit'/><img src='delete.png' alt='Delete" + i + "' class='btnDelete'/></td>" +
-                    "   <td>" + emp.ID + "</td>" +
-                    "   <td>" + emp.Name + "</td>" +
-                    "   <td>" + emp.Phone + "</td>" +
-                    "   <td>" + emp.Email + "</td>" +
+                    "   <td>" + app.ID + "</td>" +
+                    "   <td>" + app.Name + "</td>" +
+                    "   <td>" + app.Phone + "</td>" +
+                    "   <td>" + app.Email + "</td>" +
                     "</tr>");
             }
         }
@@ -91,13 +91,13 @@ $(document).ready(function () {
             operation = "E";
             selected_index = parseInt($(this).attr("alt").replace("Edit", ""), null);
 
-            var emp = JSON.parse(tbApplicants[selected_index]);
-            $("#empID").val(emp.ID);
-            $("#empName").val(emp.Name);
-            $("#empPhone").val(emp.Phone);
-            $("#empEmail").val(emp.Email);
-            $("#empID").attr("readonly", "readonly");
-            $("#empName").focus();
+            var app = JSON.parse(tbApplicants[selected_index]);
+            $("#appID").val(app.ID);
+            $("#appName").val(app.Name);
+            $("#appPhone").val(app.Phone);
+            $("#appEmail").val(app.Email);
+            $("#appID").attr("readonly", "readonly");
+            $("#appName").focus();
         });
 
         $(".btnDelete").on("click", function () {
