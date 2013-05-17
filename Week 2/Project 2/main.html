@@ -20,132 +20,114 @@
             
         </script>
     </head>// Other scripts here
-
-
-
     <!-- Home -->
-<div data-role="page" id="home">
-    <div data-theme="a" data-role="header">
-        <h3>
+    <div data-role="page" id="home">
+        <div data-theme="a" data-role="header">
+             <h3>
             Bio Applicant
         </h3>
-    </div>
-    <div data-role="content">
-        <div style="">
-            <img style="width: 288px; height: 80px" src="https://lh5.googleusercontent.com/-C3m0CIiwhzg/UY5UANDN1zI/AAAAAAAAA48/PY4p1Zbb9Tk/w1056-h279-no/Screen+Shot+2013-05-11+at+10.21.36+AM.png">
+
         </div>
-        <div data-role="collapsible-set" data-theme="f" data-content-theme="f">
-            <div data-role="collapsible">
-                <h3>
+        <div data-role="content">
+            <div style="">
+                <img style="width: 288px; height: 80px" src="https://lh5.googleusercontent.com/-C3m0CIiwhzg/UY5UANDN1zI/AAAAAAAAA48/PY4p1Zbb9Tk/w1056-h279-no/Screen+Shot+2013-05-11+at+10.21.36+AM.png">
+            </div>
+            <div data-role="collapsible-set" data-theme="f" data-content-theme="f">
+                <div data-role="collapsible">
+                     <h3>
                     Get Directions
                 </h3>
-                <div>
-                    <a href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=1200+Pennsylvania+Ave+SE,+Washington,+District+of+Columbia,+20003&amp;sll=37.0625,-95.677068&amp;sspn=44.118686,114.169922&amp;ie=UTF8&amp;cd=1&amp;geocode=FT5MUQIdIDlp-w&amp;split=0&amp;ll=38.882147,-76.99017&amp;spn=0.01064,0.027874&amp;z=16&amp;iwloc=A"
-                    target="_blank" data-transition="flow">
+
+                    <div> <a href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=1200+Pennsylvania+Ave+SE,+Washington,+District+of+Columbia,+20003&amp;sll=37.0625,-95.677068&amp;sspn=44.118686,114.169922&amp;ie=UTF8&amp;cd=1&amp;geocode=FT5MUQIdIDlp-w&amp;split=0&amp;ll=38.882147,-76.99017&amp;spn=0.01064,0.027874&amp;z=16&amp;iwloc=A"
+                        target="_blank" data-transition="flow">
                         Directions to Here
                     </a>
+
+                    </div>
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=1200 Pennsylvania Ave NW Washington, DC 20004&amp;zoom=12&amp;size=288x200&amp;markers=Washington, DC&amp;sensor=false" width="288" height="200">
                 </div>
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=1200 Pennsylvania Ave NW Washington, DC 20004&amp;zoom=12&amp;size=288x200&amp;markers=Washington, DC&amp;sensor=false"
-                width="288" height="200">
             </div>
-        </div>
-        <div data-role="collapsible-set" data-theme="f" data-content-theme="f">
-            <div data-role="collapsible">
-                <h3>
+            <div data-role="collapsible-set" data-theme="f" data-content-theme="f">
+                <div data-role="collapsible">
+                     <h3>
                     Contact Us
                 </h3>
-                <div>
-                    <a href="tel:+18008999125" data-transition="fade">
+
+                    <div> <a href="tel:+18008999125" data-transition="fade">
                         1-800-899-9125
                     </a>
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <a data-role="button" data-theme="b" href="#schedule">
-            Schedule A Fingerprinting
+            </div> <a data-role="button" data-theme="b" data-icon="check" href="#schedule">
+            Schedule to be Fingerprinted
         </a>
-    </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
+
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+             <h3>
             All Rights Reserved
         </h3>
+
+        </div>
     </div>
-</div>
-
-
-
-<!-- Schedule -->
-<div data-role="page" id="schedule">
-    <div data-theme="a" data-role="header">
-        <a data-role="button" data-theme="d" href="#home" class="ui-btn-left" data-transition="flip">
+    <!-- Home -->
+    <div data-role="page" id="schedule">
+        <div data-theme="a" data-role="header"> <a data-role="button" data-theme="d" href="#home" class="ui-btn-left" data-transition="flip">
             Home
         </a>
-        <h3>
-            Schedule A Print
+
+             <h3>
+            Bio Applicant
         </h3>
+
+        </div>
+        
+        <body>
+            <form id="addApplicant">
+                <ul>
+                    <li>
+                        <label for="appID">Appointment Date:</label>
+                        <input type="date" id="appID" />
+                    </li>
+                    <li>
+                        <label for="appLast">Last Name:</label>
+                        <input type="text" id="appLast" />
+                    </li>
+                    <li>
+                        <label for="appFirst">First Name:</label>
+                        <input type="text" id="appFirst" />
+                    </li>
+                    <li>
+                        <label for="appPhone">Phone:</label>
+                        <input type="tel" id="appPhone" />
+                    </li>
+                    <li>
+                        <label for="appEmail">Email:</label>
+                        <input type="email" id="appEmail" />
+                    </li>
+                    <li>
+                        <input type="submit" value="Submit" data-icon="check" data-theme="b" id="btnSave" />
+                    </li>
+                </ul>
+            </form>
+                <div data-role="content">
+        <a data-role="button" data-theme="a" href="LOAD XML" data-icon="bars"
+        data-iconpos="left">
+            Load XML
+        </a>
+        <a data-role="button" data-theme="a" href="LOADJSON" data-icon="gear"
+        data-iconpos="left">
+            Load JSON
+        </a>
     </div>
-    <div data-role="content">
-        <form action="">
-            <div data-role="fieldcontain">
-                <label for="selectmenu1">
-                    Originating Agency Number:
-                </label>
-                <select id="selectmenu1" name="ori" data-theme="d">
-                    <option value="flprr">
-                        FLPRR - Personal Request
-                    </option>
-                    <option value="value">
-                        FLEDU - Dept. of Education
-                    </option>
-                    <option value="value">
-                        FLSP - State Police
-                    </option>
-                    <option value="value">
-                        FLBKF - Banking &amp; Finance
-                    </option>
-                </select>
+            <div data-role="content">
+                <table id="tblList"></table>
             </div>
-            <div data-role="fieldcontain">
-                <label for="selectmenu3">
-                    Document Type:
-                </label>
-                <select id="selectmenu3" name="" data-theme="d">
-                    <option value="option1">
-                        B1 - Both Federal &amp; State
-                    </option>
-                    <option value="value">
-                        F1 - Federal Only
-                    </option>
-                    <option value="value">
-                        S1 - State Only
-                    </option>
-                </select>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="textinput1">
-                    Contributor's Name:
-                </label>
-                <input name="" id="textinput1" placeholder="" value="" type="text">
-            </div>
-            <div data-role="fieldcontain">
-                <label for="textinput4">
-                    Contributor's Phone Number:
-                </label>
-                <input name="" id="textinput4" placeholder="" value="" type="tel">
-            </div>
-            <div data-role="fieldcontain">
-                <label for="textinput2">
-                    Contributor's Email:
-                </label>
-                <input name="" id="textinput2" placeholder="" value="" type="email">
-            </div>
-            <input type="submit" data-theme="b" data-icon="check" data-iconpos="left"
-            value="Submit">
-        </form>
-    </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                 <h3>
             All Rights Reserved
         </h3>
+
+            </div>
     </div>
-</div>
