@@ -1,0 +1,10 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/asddirectory"
+    },
+   "cloudant": {
+      "db": "https://averedeciontlebelenceope:B7lxHuuR5uYHbAW670MLuDrr@scottwaite.cloudant.com/asddirectory"
+    }
+  }
+}
