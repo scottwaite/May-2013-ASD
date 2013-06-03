@@ -10,16 +10,16 @@
         <title></title>
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" href="my.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" /></script>
+        <script src="jquery.couch.js"></script>
+        <script src="modernizr.custom.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script src="jquery.validate.js"></script>
+        <script src="main.js">
             
         </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js">
-            
-        </script>
-        <script src="js/main.js">
-            
-        </script>
-    </head>// Other scripts here
+    </head>
+    <!-- Other scripts here -->
     <!-- Home -->
     <div data-role="page" id="home">
         <div data-theme="a" data-role="header">
@@ -63,6 +63,9 @@
             Schedule to be Fingerprinted
         </a>
 
+        </div>
+        <div data-role="content" class="ui-body-a">
+            <ul id="applicantlist"></ul>
         </div>
         <div data-theme="a" data-role="footer" data-position="fixed">
              <h3>
@@ -111,8 +114,8 @@
                     </li>
                 </ul>
             </form>
-               <div data-role="content">
-                <table id="tblList"></table>
+            <div data-role="content">
+                <table id="tbApplicants"></table>
             </div>
             <div data-theme="a" data-role="footer" data-position="fixed">
                  <h3>
